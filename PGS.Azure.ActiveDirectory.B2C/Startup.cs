@@ -38,7 +38,7 @@ namespace PGS.Azure.ActiveDirectory.B2C
         {
             app.UseBrowserLink();
             app.UseDeveloperExceptionPage();
-
+            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().Build());
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc(routes =>

@@ -22,5 +22,7 @@ namespace PGS.Azure.ActiveDirectory.B2C.Controllers
         {
             RedirectUri = Url.Action(nameof(Index))
         }, CookieAuthenticationDefaults.AuthenticationScheme, OpenIdConnectDefaults.AuthenticationScheme);
+
+        public IActionResult Login() => View();
     }
 }
